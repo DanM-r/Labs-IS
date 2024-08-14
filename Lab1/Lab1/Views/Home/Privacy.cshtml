@@ -1,6 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    String authorName = "Daniel Mora Rodriguez";
+    int grade = 100;
 }
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>@ViewData["Title"]</title>
+    </head>
+    <body>
+        <div>
+           <h1>Mi primera vista</h1>
+           <h2>¡Hola Mundo!</h2>
+           <p>
+               <strong>Me llamo:</strong> @authorName <br/>
+               Mi nota el día de hoy es: <input type="number" value="@grade" placeholder="Escriba su nota"/>
+           </p>
+        </div>
 
-<p>Use this page to detail your site's privacy policy.</p>
+        <div>
+            <label>Caja para texto:</label>
+            <input type="text" placeholder="Esciba cualquier cosa"/>
+            <hr/>
+        </div>
+
+        <div>
+            <a class="btn btn-info" href="/Home/Index"/> Volver a la página de inicio</a> <br/>
+        </div>
+    </body>
+   </html>
