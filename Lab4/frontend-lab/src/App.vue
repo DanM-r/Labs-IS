@@ -1,26 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Daniel Mora Rodriguez"/>
+  <ListCountries />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ListCountries from './components/ListCountries.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: { 
+    ListCountries,
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
