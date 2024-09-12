@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using backend_lab.Models;
+
+using backend_lab.Handlers;
 
 namespace backend_lab.Controllers
 {
@@ -7,10 +10,18 @@ namespace backend_lab.Controllers
     [ApiController]
     public class CountriesController : ControllerBase
     {
-        [HttpGet]
-        public string Get()
+        private readonly CountryHandler _countriesHandler;
+
+        public CountriesController()
         {
-            return "Hola Mundo";
+            _countriesHandler = new CountryHandler();
+        }
+
+        [HttpGet]
+        public List<CountryModel> Get()
+        {
+            var countries = _countriesHandler.ObtenerPaises();
+            return countries;
         }
     }
 }
