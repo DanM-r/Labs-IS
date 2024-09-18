@@ -1,6 +1,18 @@
 <template>
   <div class="container mt-5">
     <h1 class="display-4 text-center">Lista de países</h1>
+    <div class="row justify-content-end">
+      <div class="col-2">
+        <a href="/country">
+          <button
+            type="button"
+            class="btn btn-outline-secondary float-right"
+          >
+          Agregar país
+          </button>
+        </a>
+      </div>
+    </div>
     <table
     class="table is-bordered is-striped is-narrow is-hoverable
     is-fullwidth"
@@ -34,7 +46,7 @@
               v-if="allowEditing"
               v-model="pais.Idioma"
               @keypress.enter="allowEditing = !allowEditing">
-            <span v-else>{{ pais.Idioma }}</span>
+            <span v-else>{{ pais.idioma }}</span>
           </td>
           <td>
             <button @click="allowEditing = !allowEditing" class="btn btn-secondary btn-sm">Editar</button>
@@ -43,11 +55,12 @@
         </tr>
       </tbody>
     </table>
-  </div>
+  </div> 
 </template>
 
 <script>
   import { ref } from "vue";
+  import axios from "axios";
 
   export default {
     name:  "ListCountries",
@@ -60,13 +73,7 @@
     },
     data() {
       return {
-        paises: [
-        { nombre: "Costa Rica", continente: "América", Idioma: "Español" },
-        { nombre: "Japón", continente: "Asia", Idioma: "Japonés" },
-        { nombre: "Corea del Sur", continente: "Asia", Idioma: "Coreano" },
-        { nombre: "Italia", continente: "Europa", Idioma: "Italiano" },
-        { nombre: "Alemania", continente: "Europa", Idioma: "Alemán" },
-        ],
+        paises: [ ],
       };
     },
     methods:
@@ -74,7 +81,18 @@
       deleteListElement(index)
       {
         this.paises.splice(index, 1);
-      }
+      },
+
+      obtenerTareas() {
+        axios.get("https://localhost:7055/api/Countries").then(
+         (response) => {
+           this.paises = response.data;
+         });
+      },
+    },
+
+    created: function () {
+      this.obtenerTareas();
     },
   }
 </script>
