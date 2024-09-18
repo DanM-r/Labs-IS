@@ -61,6 +61,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   setup () {
       
@@ -75,6 +77,17 @@ export default {
   methods: {
     saveCountry: function () {
       console.log("Datos a guardar:", this.datosFormulario);
+
+      axios.post("https://localhost:7055/api/Countries", {
+        nombre: this.datosFormulario.nombre,
+        continente: this.datosFormulario.continente,
+        idioma: this.datosFormulario.idioma
+      }).then(function (response) {
+        console.log(response);
+        window.location.href = "/"
+      }).catch(function (error) {
+        console.log(error);
+      });
     },
   },
 }

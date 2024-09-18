@@ -23,5 +23,25 @@ namespace backend_lab.Controllers
             var countries = _countriesHandler.ObtenerPaises();
             return countries;
         }
+
+        [HttpPost]
+        public async Task<ActionResult<bool>> CreateCountry(CountryModel country)
+        {
+            try
+            {
+                if (country == null)
+                {
+                    return BadRequest();
+                }
+
+                CountryHandler countryHandler = new CountryHandler();
+                var response = countryHandler.CrearPais(country);
+                return new JsonResult(response);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error while creating a country");
+            }
+        }
     }
 }
