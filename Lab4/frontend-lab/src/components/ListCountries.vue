@@ -44,7 +44,7 @@
           <td>
             <input type="text"
               v-if="allowEditing"
-              v-model="pais.Idioma"
+              v-model="pais.idioma"
               @keypress.enter="allowEditing = !allowEditing">
             <span v-else>{{ pais.idioma }}</span>
           </td>

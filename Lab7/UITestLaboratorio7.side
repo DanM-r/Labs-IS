@@ -1,0 +1,185 @@
+{
+  "id": "d7d0331b-a6ea-4827-a769-6366e98a18ce",
+  "version": "2.0",
+  "name": "UITestLaboratorio7",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "49c055de-b254-45ce-8606-abba5f343243",
+    "name": "PruebaUIUno",
+    "commands": [{
+      "id": "372955c9-5db5-49f5-aaa0-1ae32e8200f9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9914661d-5106-47b3-9b37-b28930d5e54f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbe6ed6d-bead-44ef-b1d9-e1c73493359f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.display-4",
+      "targets": [
+        ["css=.display-4", "css:finder"],
+        ["xpath=//div[@id='app']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Lista de países')]", "xpath:innerText"]
+      ],
+      "value": "Lista de países"
+    }]
+  }, {
+    "id": "9ab4bcbd-cac6-4b87-8240-39ba9dac83b3",
+    "name": "PruebaUIDos",
+    "commands": [{
+      "id": "8959cf26-5878-4ec4-967f-5de8193dfe02",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f51d2fdc-6a95-40f1-8697-0accb9ccd113",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "019837ff-6ce7-4f74-b703-3cc6ef1ff194",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .btn-secondary",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-secondary", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/tbody/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1765a15d-4f50-4bb3-9500-ed1ee8b8a3fe",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=tr:nth-child(1) > td:nth-child(3) > input",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3) > input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/table/tbody/tr/td[3]/input", "xpath:idRelative"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": "Español"
+    }, {
+      "id": "3abf14fb-f13b-47b1-9baa-ab99ca7598ee",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "css=tr:nth-child(1) .btn-secondary",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-secondary", "css:finder"],
+        ["xpath=//div[@id='app']/div/table/tbody/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d6d4d23-7127-4879-bd8a-dea59801b76b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-secondary",
+      "targets": [
+        ["css=.btn-outline-secondary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar país')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eef17e5-689e-4296-b0f5-b386cc6ebd15",
+      "comment": "",
+      "command": "assertNotSelectedValue",
+      "target": "id=continente",
+      "targets": [],
+      "value": "Chayotes"
+    }, {
+      "id": "bc222205-f0d4-4e43-af35-cc4f45833144",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e20b153-6da7-4e2f-8050-da198cebacde",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-flex",
+      "targets": [
+        ["css=.d-flex", "css:finder"],
+        ["xpath=//div[@id='app']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea5ae6ab-c613-4aa7-9d76-546d82013262",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-secondary",
+      "targets": [
+        ["css=.btn-outline-secondary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atrás')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "450bbe05-32ac-4e3b-acb3-14a18a634929",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-secondary",
+      "targets": [
+        ["css=.btn-outline-secondary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar país')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58c8650f-c16a-4f34-ba15-ecaa36cd6386",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "http://localhost:8080/"
+    }, {
+      "id": "f24e61f0-5f7b-4fed-b6f1-08897f99ac9f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "frontend-lab",
+      "targets": [],
+      "value": "Lista de países"
+    }]
+  }],
+  "suites": [{
+    "id": "5d2bb36d-e279-4224-ab7c-f337ea7ca75b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["49c055de-b254-45ce-8606-abba5f343243"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
