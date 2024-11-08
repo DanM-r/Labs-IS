@@ -3,7 +3,7 @@
     <h1 class="display-4 text-center">Lista de países</h1>
     <div class="row justify-content-end">
       <div class="col-2">
-        <a href="/country">
+        <a href="/country" id="addbtn">
           <button
             type="button"
             class="btn btn-outline-secondary float-right"
@@ -49,8 +49,8 @@
             <span v-else>{{ pais.idioma }}</span>
           </td>
           <td>
-            <button @click="allowEditing = !allowEditing" class="btn btn-secondary btn-sm">Editar</button>
-            <button @click="deleteListElement(index)" class="btn btn-danger btn-sm">Eliminar</button>
+            <button id="editBtn" @click="allowEditing = !allowEditing" class="btn btn-secondary btn-sm">Editar</button>
+            <button id="deleteBtn" @click="deleteListElement(index)" class="btn btn-danger btn-sm">Eliminar</button>
           </td>
         </tr>
       </tbody>

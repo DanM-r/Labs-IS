@@ -41,7 +41,7 @@
           />
         </div>
         <div>
-          <button type="submit" class="btn btn-success btn-block">Guardar</button>
+          <button id="submit" type="submit" class="btn btn-success btn-block">Guardar</button>
         </div>
       </form>
       <div class="row justify-content-end me-3">
